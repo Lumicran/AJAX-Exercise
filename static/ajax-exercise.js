@@ -62,8 +62,9 @@ function showOrderResult(results) {
   $('#order-status').html(orderText);
 
   if (results.code === "ERROR") {
-
     $("#order-status").addClass("order-error");
+  } else {
+    $("#order-status").removeClass("order-error");    
   }
 }
 
