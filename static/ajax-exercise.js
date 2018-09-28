@@ -56,15 +56,15 @@ function orderMelons(evt) {
 }
 
 function showOrderResult(results) {
-  console.log(results);
 
   let orderText = results.code + ": " + results.msg;
 
   $('#order-status').html(orderText);
 
-  // if (results.result_code === "ERROR") {
+  if (results.code === "ERROR") {
 
-  // } 
+    $("#order-status").addClass("order-error");
+  }
 }
 
 $("#order-form").on('submit', orderMelons);
